@@ -1,15 +1,63 @@
+import { useEffect, useRef, useState } from 'react';
+import Modal from '../../Modal';
+
 const Inbox = () => {
+    const [showButtons, setShowButtons] = useState(false);
+    const buttonsRef = useRef(null);
+
+    const toggleButtons = () => {
+        setShowButtons(!showButtons);
+    };
+
+    const handleClickOutside = (event) => {
+        if (buttonsRef.current && !buttonsRef.current.contains(event.target)) {
+            setShowButtons(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
     return (
-        <div className='flex flex-col '>
+        <div className='flex flex-col ' ref={buttonsRef}>
+            {showButtons && (
+                <>
+                    <button className='absolute bottom-0 right-[100px]'>
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='68'
+                            height='63'
+                            viewBox='0 0 68 68'
+                            fill='none'
+                        >
+                            <path
+                                d='M68 34C68 52.7777 52.7777 68 34 68C15.2223 68 0 52.7777 0 34C0 15.2223 15.2223 0 34 0C52.7777 0 68 15.2223 68 34Z'
+                                fill='#4F4F4F'
+                            />
+                        </svg>
+                    </button>
+
+                    <Modal />
+                </>
+            )}
             <p className='text-[#f2f2f2] mb-4 text-center'>Inbox</p>
-            <button className='bg-white text-indicator-Apricot w-[60px] h-[60px]  flex items-center justify-center p-[6px] rounded-full '>
+
+            <button
+                className={`bg-white text-indicator-Apricot w-[60px] h-[60px]  flex items-center justify-center p-[6px] rounded-full ${
+                    showButtons ? 'z-10' : 'z-0'
+                }`}
+                onClick={toggleButtons}
+            >
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='24'
                     height='23'
                     viewBox='0 0 24 23'
                     fill='none'
-                    className='w-[26px] h-[26px]'
                 >
                     <path
                         fillRule='evenodd'

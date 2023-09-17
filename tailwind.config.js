@@ -3,6 +3,12 @@ export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            height: {
+                modalHeight: '450px',
+            },
+            width: {
+                modalWeight: '400px',
+            },
             backgroundColor: {
                 main: '#333',
             },

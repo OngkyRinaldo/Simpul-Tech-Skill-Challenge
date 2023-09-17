@@ -9,7 +9,6 @@ const Task = () => {
                     height='28'
                     viewBox='0 0 28 28'
                     fill='none'
-                    className='w-14 h-14'
                 >
                     <path
                         fillRule='evenodd'
