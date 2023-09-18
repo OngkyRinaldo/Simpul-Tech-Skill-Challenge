@@ -3,9 +3,9 @@ const SearchHomePage = () => {
         <section className='relative '>
             <input
                 type='text'
-                className='border border-gray-300  py-2 pl-10 pr-4 focus:outline-none bg-[#4f4f4f] w-full'
+                className='border-none focus:outline-none  bg-primary-live w-full  h-[58px]'
             />
-            <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
+            <div className='absolute inset-y-0 flex items-center pointer-events-none pl-paddingLeftHomeSearch pt-paddingTopHomeSearch pb-paddingBottomHomeSearch'>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='16'

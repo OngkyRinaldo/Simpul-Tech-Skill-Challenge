@@ -1,32 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import Modal from '../../Modal';
 
 const Inbox = () => {
     const [showButtons, setShowButtons] = useState(false);
-    const buttonsRef = useRef(null);
-
-    const toggleButtons = () => {
+    const handleButtonClick = () => {
         setShowButtons(!showButtons);
     };
-
-    const handleClickOutside = (event) => {
-        if (buttonsRef.current && !buttonsRef.current.contains(event.target)) {
-            setShowButtons(false);
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
     return (
-        <div className='flex flex-col ' ref={buttonsRef}>
+        <div className='flex flex-col '>
             {showButtons && (
                 <>
-                    <button className='absolute bottom-0 right-[100px]'>
+                    <button className='absolute bottom-0 right-3'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             width='68'
@@ -50,7 +34,7 @@ const Inbox = () => {
                 className={`bg-white text-indicator-Apricot w-[60px] h-[60px]  flex items-center justify-center p-[6px] rounded-full ${
                     showButtons ? 'z-10' : 'z-0'
                 }`}
-                onClick={toggleButtons}
+                onClick={handleButtonClick}
             >
                 <svg
                     xmlns='http://www.w3.org/2000/svg'

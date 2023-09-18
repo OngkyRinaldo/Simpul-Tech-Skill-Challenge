@@ -3,16 +3,33 @@ export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            fontFamily: {
+                Lato: ['Lato'],
+            },
+            screens: {
+                sm: '640px',
+                md: '768px',
+                lg: '1024px',
+                xl: '1280px',
+                '2xl': '1536px',
+                '3xl': '1920px',
+            },
             height: {
-                modalHeight: '450px',
+                modalHeight: '737px',
             },
             width: {
-                modalWeight: '400px',
+                modalWidth: '734px',
+            },
+            padding: {
+                paddingTopHomeSearch: '19px',
+                paddingBottomHomeSearch: '23px',
+                paddingLeftHomeSearch: '26px',
             },
             backgroundColor: {
                 main: '#333',
             },
             colors: {
+                main: '#333',
                 primary: {
                     blue: '#2F80ED',
                     live: '#4F4F4F',

@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import buttonReducer from '../feature/menuSlice';
+import inboxReducer from '../feature/inboxSlice';
 
 export const store = configureStore({
-    reducer: { button: buttonReducer },
+    reducer: { messages: inboxReducer },
 });

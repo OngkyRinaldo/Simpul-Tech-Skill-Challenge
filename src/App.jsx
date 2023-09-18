@@ -1,16 +1,14 @@
-import Test from './components/Test';
-
-import Menu from './components/button/menu/Menu';
-import SearchHomePage from './components/serach/SearchHomePage';
+import { Route, Routes } from 'react-router-dom';
+import Index from './pages/Index';
+import Inbox from './pages/Inbox';
 
 function App() {
     return (
         <main className='h-screen w-screen  bg-main'>
-            <section className='container ml-auto h-full w-4/5 border-l border-[#F2F2F2]'>
-                <SearchHomePage />
-                <Menu />
-                {/* <Test /> */}
-            </section>
+            <Routes>
+                <Route path='/' element={<Index />} />
+                <Route path='/inbox' element={<Inbox />} />
+            </Routes>
         </main>
     );
 }

@@ -1,38 +1,22 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Task from './Task';
 import Inbox from './Inbox';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     const [showButtons, setShowButtons] = useState(false);
-    const buttonsRef = useRef(null);
-
-    const toggleButtons = () => {
+    const handleButtonClick = () => {
         setShowButtons(!showButtons);
     };
 
-    const handleClickOutside = (event) => {
-        if (buttonsRef.current && !buttonsRef.current.contains(event.target)) {
-            setShowButtons(false);
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
-
     return (
-        <section
-            className='flex justify-center items-center gap-x-8 absolute bottom-[33px] right-10 '
-            ref={buttonsRef}
-        >
+        <section className='flex justify-center items-center gap-x-8 absolute bottom-[33px] right-10 '>
             {showButtons && (
                 <div className='flex justify-center items-center gap-x-8'>
                     <Task />
-                    <Inbox />
+                    <Link to='/inbox'>
+                        <Inbox />
+                    </Link>
                 </div>
             )}
 
@@ -40,7 +24,7 @@ const Menu = () => {
                 className={`bg-primary-blue text-white w-16 h-16 flex items-center justify-center p-2 rounded-full ${
                     showButtons ? 'mt-10' : 'mt-0'
                 }`}
-                onClick={toggleButtons}
+                onClick={handleButtonClick}
             >
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
