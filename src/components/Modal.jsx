@@ -5,8 +5,8 @@ import { selectAllMessages } from '../feature/inboxSlice';
 const Modal = () => {
     const messages = useSelector(selectAllMessages);
     return (
-        <div className='absolute bottom-20 right-0'>
-            <div className='w-[600px] h-[600px] 3xl:w-modalWidth 3xl:h-modalHeight bg-white  p-5'>
+        <div className='absolute  bottom-16 sm:bottom-40 3xl:bottom-20 right-0'>
+            <div className='w-80 h-fit lg:w-[600px] lg:h-[600px] 3xl:w-modalWidth 3xl:h-modalHeight bg-white  p-5'>
                 <SearchModal />
 
                 {/* <div className='w-full flex justify-center items-center mt-28 3xl:mt-64'>
@@ -110,10 +110,10 @@ const Modal = () => {
                     return (
                         <>
                             <div
-                                className=' mt-[26px] flex justify-start items-center gap-x-8'
+                                className='mt-3 gap-x-8 3xl:mt-[26px] flex justify-start items-center 3xl:gap-x-8'
                                 key={message.id}
                             >
-                                <div className='flex justify-between items-center relative  '>
+                                <div className='flex justify-between items-center sm:gap-x-2 relative  '>
                                     <div className='w-[34px] h-[34px] bg-primary-LavenderPinocchio flex justify-center items-center rounded-full  '>
                                         <svg
                                             xmlns='http://www.w3.org/2000/svg'
@@ -149,8 +149,8 @@ const Modal = () => {
                                     </div>
                                 </div>
                                 <div className=' font-Lato'>
-                                    <div className='flex items-center gap-x-[17px]'>
-                                        <p className='text-md font-bold text-primary-blue cursor-pointer'>
+                                    <div className='flex items-center sm:gap-x-2 3xl:gap-x-[17px]'>
+                                        <p className='text-sm 3xl:text-md font-bold text-primary-blue cursor-pointer'>
                                             {message.title}
                                         </p>
                                         <p className='text-xs text-primary-live'>
@@ -184,15 +184,15 @@ const Modal = () => {
                                 </div>
                             </div>
 
-                            <hr className='text-primary-BattleshipGrey mt-[37px]' />
+                            <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
                         </>
                     );
                 })}
-                {messages.slice(1, messages.length).map((message) => {
+                {messages.slice(1, 4).map((message) => {
                     return (
                         <>
                             <div
-                                className='mt-[26px] flex justify-start items-center gap-x-8'
+                                className='mt-2 3xl:mt-[23px] flex justify-start items-center gap-x-8'
                                 key={message.id}
                             >
                                 <div className='flex justify-center items-center relative '>
@@ -231,8 +231,8 @@ const Modal = () => {
                                     </div>
                                 </div>
                                 <div className=' font-Lato'>
-                                    <div className='flex items-center gap-x-[17px]'>
-                                        <p className='text-md font-bold text-primary-blue'>
+                                    <div className='flex items-center gap-x-2'>
+                                        <p className='text-xs sm:text-sm 3xl:text-md font-bold text-primary-blue'>
                                             {message.title}
                                         </p>
                                         <p className='text-xs text-primary-live'>
@@ -250,7 +250,7 @@ const Modal = () => {
                                     </p>
                                 </div>
                             </div>
-                            <hr className='text-primary-BattleshipGrey mt-[37px]' />
+                            <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
                         </>
                     );
                 })}

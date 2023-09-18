@@ -21,7 +21,7 @@ const Menu = () => {
             )}
 
             <button
-                className={`bg-primary-blue text-white w-16 h-16 flex items-center justify-center p-2 rounded-full ${
+                className={`bg-primary-blue text-white w-12 h-12 xl:w-16 xl:h-16 flex items-center justify-center p-2 rounded-full ${
                     showButtons ? 'mt-10' : 'mt-0'
                 }`}
                 onClick={handleButtonClick}

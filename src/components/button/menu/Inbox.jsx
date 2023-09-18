@@ -10,7 +10,7 @@ const Inbox = () => {
         <div className='flex flex-col '>
             {showButtons && (
                 <>
-                    <button className='absolute bottom-0 right-3'>
+                    <button className='absolute bottom-0  -right-1 xl:right-3'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             width='68'
@@ -31,7 +31,7 @@ const Inbox = () => {
             <p className='text-[#f2f2f2] mb-4 text-center'>Inbox</p>
 
             <button
-                className={`bg-white text-indicator-Apricot w-[60px] h-[60px]  flex items-center justify-center p-[6px] rounded-full ${
+                className={`bg-white text-indicator-Apricot w-12 h-12 xl:w-[60px] xl:h-[60px]  flex items-center justify-center p-[6px] rounded-full ${
                     showButtons ? 'z-10' : 'z-0'
                 }`}
                 onClick={handleButtonClick}
