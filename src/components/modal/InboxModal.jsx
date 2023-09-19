@@ -7,6 +7,9 @@ import {
 } from '../../feature/inboxSlice';
 import SearchModal from '../serach/SearchModal';
 import { Link } from 'react-router-dom';
+import grayPersonIcon from '../../assets/icons/modal/grayPerson.svg';
+import redDotIcon from '../../assets/icons/modal/redDot.svg';
+import bluePersonIcon from '../../assets/icons/modal/bluePerson.svg';
 
 const Modal = () => {
     const dispatch = useDispatch();
@@ -128,7 +131,7 @@ const Modal = () => {
                         </svg>
                     </div>
                 ) : (
-                    ''
+                    <></>
                 )}
 
                 {filteredUsers.slice(0, 1).map((user) => {
@@ -137,37 +140,16 @@ const Modal = () => {
                             <div className='mt-3 gap-x-8 3xl:mt-[26px] flex justify-start items-center 3xl:gap-x-8'>
                                 <div className='flex justify-between items-center sm:gap-x-2 relative'>
                                     <div className='w-[34px] h-[34px] bg-primary-LavenderPinocchio flex justify-center items-center rounded-full  '>
-                                        <svg
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='18'
-                                            height='18'
-                                            viewBox='0 0 18 18'
-                                            fill='none'
-                                        >
-                                            <path
-                                                fillRule='evenodd'
-                                                clipRule='evenodd'
-                                                d='M9 3C7.3425 3 6 4.3425 6 6C6 7.6575 7.3425 9 9 9C10.6575 9 12 7.6575 12 6C12 4.3425 10.6575 3 9 3ZM10.5 6C10.5 5.175 9.825 4.5 9 4.5C8.175 4.5 7.5 5.175 7.5 6C7.5 6.825 8.175 7.5 9 7.5C9.825 7.5 10.5 6.825 10.5 6ZM13.5 13.5C13.35 12.9675 11.025 12 9 12C6.9825 12 4.6725 12.96 4.5 13.5H13.5ZM3 13.5C3 11.505 6.9975 10.5 9 10.5C11.0025 10.5 15 11.505 15 13.5V15H3V13.5Z'
-                                                fill='black'
-                                                fillOpacity='0.54'
-                                            />
-                                        </svg>
+                                        <img
+                                            src={grayPersonIcon}
+                                            alt='grayPerson.svg'
+                                        />
                                     </div>
                                     <div className='w-[34px] h-[34px] bg-primary-blue flex justify-center items-center rounded-full z-10 absolute left-4'>
-                                        <svg
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='18'
-                                            height='18'
-                                            viewBox='0 0 18 18'
-                                            fill='none'
-                                        >
-                                            <path
-                                                fillRule='evenodd'
-                                                clipRule='evenodd'
-                                                d='M9 3C7.3425 3 6 4.3425 6 6C6 7.6575 7.3425 9 9 9C10.6575 9 12 7.6575 12 6C12 4.3425 10.6575 3 9 3ZM10.5 6C10.5 5.175 9.825 4.5 9 4.5C8.175 4.5 7.5 5.175 7.5 6C7.5 6.825 8.175 7.5 9 7.5C9.825 7.5 10.5 6.825 10.5 6ZM13.5 13.5C13.35 12.9675 11.025 12 9 12C6.9825 12 4.6725 12.96 4.5 13.5H13.5ZM3 13.5C3 11.505 6.9975 10.5 9 10.5C11.0025 10.5 15 11.505 15 13.5V15H3V13.5Z'
-                                                fill='white'
-                                            />
-                                        </svg>
+                                        <img
+                                            src={bluePersonIcon}
+                                            alt='bluePerson.svg'
+                                        />
                                     </div>
                                 </div>
                                 <div className=' font-Lato'>
@@ -190,19 +172,7 @@ const Modal = () => {
                                     </p>
                                 </div>
                                 <div className='ml-auto mt-auto'>
-                                    <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        width='10'
-                                        height='10'
-                                        viewBox='0 0 10 10'
-                                        fill='none'
-                                        className=''
-                                    >
-                                        <path
-                                            d='M10 5C10 7.76142 7.76142 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.76142 0 10 2.23858 10 5Z'
-                                            fill='#EB5757'
-                                        />
-                                    </svg>
+                                    <img src={redDotIcon} alt='redDot.svg' />
                                 </div>
                             </div>
                             <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
@@ -216,37 +186,16 @@ const Modal = () => {
                             <div className='mt-2 3xl:mt-[23px] flex justify-start items-center gap-x-8'>
                                 <div className='flex justify-center items-center relative '>
                                     <div className='w-[34px] h-[34px] bg-primary-blue flex justify-center items-center rounded-full absolute left-4'>
-                                        <svg
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='18'
-                                            height='18'
-                                            viewBox='0 0 18 18'
-                                            fill='none'
-                                        >
-                                            <path
-                                                fillRule='evenodd'
-                                                clipRule='evenodd'
-                                                d='M9 3C7.3425 3 6 4.3425 6 6C6 7.6575 7.3425 9 9 9C10.6575 9 12 7.6575 12 6C12 4.3425 10.6575 3 9 3ZM10.5 6C10.5 5.175 9.825 4.5 9 4.5C8.175 4.5 7.5 5.175 7.5 6C7.5 6.825 8.175 7.5 9 7.5C9.825 7.5 10.5 6.825 10.5 6ZM13.5 13.5C13.35 12.9675 11.025 12 9 12C6.9825 12 4.6725 12.96 4.5 13.5H13.5ZM3 13.5C3 11.505 6.9975 10.5 9 10.5C11.0025 10.5 15 11.505 15 13.5V15H3V13.5Z'
-                                                fill='white'
-                                            />
-                                        </svg>
+                                        <img
+                                            src={bluePersonIcon}
+                                            alt='bluePerson.svg'
+                                        />
                                     </div>
                                     <div className='w-[34px] h-[34px] bg-primary-LavenderPinocchio flex justify-center items-center rounded-full '>
-                                        <svg
-                                            xmlns='http://www.w3.org/2000/svg'
-                                            width='18'
-                                            height='18'
-                                            viewBox='0 0 18 18'
-                                            fill='none'
-                                        >
-                                            <path
-                                                fillRule='evenodd'
-                                                clipRule='evenodd'
-                                                d='M9 3C7.3425 3 6 4.3425 6 6C6 7.6575 7.3425 9 9 9C10.6575 9 12 7.6575 12 6C12 4.3425 10.6575 3 9 3ZM10.5 6C10.5 5.175 9.825 4.5 9 4.5C8.175 4.5 7.5 5.175 7.5 6C7.5 6.825 8.175 7.5 9 7.5C9.825 7.5 10.5 6.825 10.5 6ZM13.5 13.5C13.35 12.9675 11.025 12 9 12C6.9825 12 4.6725 12.96 4.5 13.5H13.5ZM3 13.5C3 11.505 6.9975 10.5 9 10.5C11.0025 10.5 15 11.505 15 13.5V15H3V13.5Z'
-                                                fill='black'
-                                                fillOpacity='0.54'
-                                            />
-                                        </svg>
+                                        <img
+                                            src={grayPersonIcon}
+                                            alt='grayPerson.svg'
+                                        />
                                     </div>
                                 </div>
                                 <div className=' font-Lato'>
@@ -269,6 +218,7 @@ const Modal = () => {
                                     </p>
                                 </div>
                             </div>
+                            <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
                         </div>
                     );
                 })}

@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Index from './pages/Index';
 import Inbox from './pages/Inbox';
-
 import NotFound from './pages/404';
 import InboxDetails from './pages/InboxDetail';
 

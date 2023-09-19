@@ -39,6 +39,14 @@ export default {
                 indicator: {
                     Apricot: '#F8B76B',
                 },
+                chats: {
+                    oasis: '#FCEED3',
+                    indianYellow: '#E5A443',
+                    lavenderMist: '#EEDCFF',
+                    lavenderIndigo: '#9B51E0',
+                    mintTulip: '#D2F2EA',
+                    mint: '#43B78D',
+                },
             },
         },
     },
