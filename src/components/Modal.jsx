@@ -6,7 +6,7 @@ const Modal = () => {
     const messages = useSelector(selectAllMessages);
     return (
         <div className='absolute  bottom-16 sm:bottom-40 3xl:bottom-20 right-0'>
-            <div className='w-80 h-fit lg:w-[600px] lg:h-[600px] 3xl:w-modalWidth 3xl:h-modalHeight bg-white  p-5'>
+            <div className='w-80 h-fit lg:w-[600px]  3xl:w-modalWidth 3xl:h-modalHeight bg-white  p-5'>
                 <SearchModal />
 
                 {/* <div className='w-full flex justify-center items-center mt-28 3xl:mt-64'>
