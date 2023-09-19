@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Modal from '../../Modal';
+import InboxModal from '../../modal/InboxModal';
 
 const Inbox = () => {
     const [showButtons, setShowButtons] = useState(false);
@@ -25,7 +25,7 @@ const Inbox = () => {
                         </svg>
                     </button>
 
-                    <Modal />
+                    <InboxModal />
                 </>
             )}
             <p className='text-[#f2f2f2] mb-4 text-center'>Inbox</p>

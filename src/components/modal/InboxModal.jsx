@@ -4,8 +4,9 @@ import {
     fetchUsers,
     selectAllUserData,
     selectStatusUserData,
-} from '../feature/inboxSlice';
-import SearchModal from './serach/SearchModal';
+} from '../../feature/inboxSlice';
+import SearchModal from '../serach/SearchModal';
+import { Link } from 'react-router-dom';
 
 const Modal = () => {
     const dispatch = useDispatch();
@@ -132,7 +133,7 @@ const Modal = () => {
 
                 {filteredUsers.slice(0, 1).map((user) => {
                     return (
-                        <div key={user.id}>
+                        <Link to='/detailMessage' key={user.id}>
                             <div className='mt-3 gap-x-8 3xl:mt-[26px] flex justify-start items-center 3xl:gap-x-8'>
                                 <div className='flex justify-between items-center sm:gap-x-2 relative'>
                                     <div className='w-[34px] h-[34px] bg-primary-LavenderPinocchio flex justify-center items-center rounded-full  '>
@@ -205,7 +206,7 @@ const Modal = () => {
                                 </div>
                             </div>
                             <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
-                        </div>
+                        </Link>
                     );
                 })}
 
