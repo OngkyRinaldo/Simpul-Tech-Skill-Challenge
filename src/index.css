@@ -7,3 +7,11 @@
 /* * {
     border: 1px solid red;
 } */
+
+.test {
+    display: none;
+}
+
+.test.active {
+    display: inline;
+}

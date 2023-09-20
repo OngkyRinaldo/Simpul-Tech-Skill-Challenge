@@ -4,13 +4,16 @@ import Inbox from './pages/Inbox';
 import NotFound from './pages/404';
 import InboxDetails from './pages/InboxDetail';
 import FastVisaSupport from './components/support/FastVisaSupport';
+import Modal from './components/modal/InboxModal';
 
 function App() {
     return (
         <main className='h-screen w-screen bg-main 3xl:h-screen 3xl:w-screen  '>
             <Routes>
                 <Route path='/' element={<Index />} />
-                <Route path='inbox' element={<Inbox />} />
+                <Route path='inbox' element={<Inbox />}>
+                    <Route path='inboxModal' element={<Modal />} />
+                </Route>
                 <Route path='detailMessage' element={<InboxDetails />} />
                 <Route path='fastVisaSupport' element={<FastVisaSupport />} />
                 <Route path='*' element={<NotFound />} />

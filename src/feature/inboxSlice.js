@@ -4,6 +4,7 @@ import axios from 'axios';
 const apiUrl = 'https://jsonplaceholder.typicode.com/comments';
 
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const response = await axios.get(apiUrl);
     return response.data;
 });
