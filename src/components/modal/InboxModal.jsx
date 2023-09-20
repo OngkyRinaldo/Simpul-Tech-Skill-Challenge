@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import grayPersonIcon from '../../assets/icons/modal/grayPerson.svg';
 import redDotIcon from '../../assets/icons/modal/redDot.svg';
 import bluePersonIcon from '../../assets/icons/modal/bluePerson.svg';
+import fIcon from '../../assets/icons/modal/F.svg';
 
 const Modal = () => {
     const dispatch = useDispatch();
@@ -180,7 +181,7 @@ const Modal = () => {
                     );
                 })}
 
-                {filteredUsers.slice(1, 4).map((user) => {
+                {filteredUsers.slice(1, 3).map((user) => {
                     return (
                         <div key={user.id}>
                             <div className='mt-2 3xl:mt-[23px] flex justify-start items-center gap-x-8'>
@@ -204,10 +205,7 @@ const Modal = () => {
                                             {user.name}
                                         </p>
                                         <p className='text-xs text-primary-live'>
-                                            02/06/2021
-                                        </p>
-                                        <p className='text-xs text-primary-live'>
-                                            10:45
+                                            02/06/2021 10:45
                                         </p>
                                     </div>
                                     <p className='text-primary-live font-bold text-md'>
@@ -222,6 +220,31 @@ const Modal = () => {
                         </div>
                     );
                 })}
+
+                <Link to='#'>
+                    <div className='mt-2 3xl:mt-[23px] flex justify-start items-center gap-x-16'>
+                        <div className='flex justify-center items-center relative '>
+                            <div className='w-[34px] h-[34px] bg-primary-blue flex justify-center items-center rounded-full absolute left-4'>
+                                <img src={fIcon} alt='F.svg' />
+                            </div>
+                        </div>
+                        <div className=' font-Lato'>
+                            <div className='flex items-center gap-x-2 cursor-pointer'>
+                                <p className='text-xs sm:text-sm 3xl:text-md font-bold text-primary-blue'>
+                                    FastVisa Support
+                                </p>
+                                <p className='text-xs text-primary-live'>
+                                    01/06/2021 12:19
+                                </p>
+                            </div>
+
+                            <p className='text-primary-live text-sm'>
+                                Hey there! Welcome to your inbox.
+                            </p>
+                        </div>
+                    </div>
+                    <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
+                </Link>
             </div>
         </div>
     );
