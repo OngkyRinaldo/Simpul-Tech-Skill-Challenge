@@ -220,31 +220,34 @@ const Modal = () => {
                         </div>
                     );
                 })}
+                {filteredUsers.slice(3, 4).map((user) => {
+                    return (
+                        <Link to='/FastVisaSupport' key={user.id}>
+                            <div className='mt-2 3xl:mt-[23px] flex justify-start items-center gap-x-16'>
+                                <div className='flex justify-center items-center relative '>
+                                    <div className='w-[34px] h-[34px] bg-primary-blue flex justify-center items-center rounded-full absolute left-4'>
+                                        <img src={fIcon} alt='F.svg' />
+                                    </div>
+                                </div>
+                                <div className=' font-Lato'>
+                                    <div className='flex items-center gap-x-2 cursor-pointer'>
+                                        <p className='text-xs sm:text-sm 3xl:text-md font-bold text-primary-blue'>
+                                            FastVisa Support
+                                        </p>
+                                        <p className='text-xs text-primary-live'>
+                                            01/06/2021 12:19
+                                        </p>
+                                    </div>
 
-                <Link to='#'>
-                    <div className='mt-2 3xl:mt-[23px] flex justify-start items-center gap-x-16'>
-                        <div className='flex justify-center items-center relative '>
-                            <div className='w-[34px] h-[34px] bg-primary-blue flex justify-center items-center rounded-full absolute left-4'>
-                                <img src={fIcon} alt='F.svg' />
+                                    <p className='text-primary-live text-sm'>
+                                        Hey there! Welcome to your inbox.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className=' font-Lato'>
-                            <div className='flex items-center gap-x-2 cursor-pointer'>
-                                <p className='text-xs sm:text-sm 3xl:text-md font-bold text-primary-blue'>
-                                    FastVisa Support
-                                </p>
-                                <p className='text-xs text-primary-live'>
-                                    01/06/2021 12:19
-                                </p>
-                            </div>
-
-                            <p className='text-primary-live text-sm'>
-                                Hey there! Welcome to your inbox.
-                            </p>
-                        </div>
-                    </div>
-                    <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
-                </Link>
+                            <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
+                        </Link>
+                    );
+                })}
             </div>
         </div>
     );

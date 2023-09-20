@@ -3,6 +3,7 @@ import Index from './pages/Index';
 import Inbox from './pages/Inbox';
 import NotFound from './pages/404';
 import InboxDetails from './pages/InboxDetail';
+import FastVisaSupport from './components/support/FastVisaSupport';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
                 <Route path='/' element={<Index />} />
                 <Route path='inbox' element={<Inbox />} />
                 <Route path='detailMessage' element={<InboxDetails />} />
+                <Route path='fastVisaSupport' element={<FastVisaSupport />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </main>
