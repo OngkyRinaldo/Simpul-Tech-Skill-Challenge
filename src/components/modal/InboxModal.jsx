@@ -88,7 +88,7 @@ const Modal = () => {
                         })}
                         {filteredUsers.slice(1, 3).map((user) => {
                             return (
-                                <div key={user.id}>
+                                <Link to='/detailMessage' key={user.id}>
                                     <div className='mt-2 3xl:mt-[23px] flex justify-start items-center gap-x-8'>
                                         <div className='flex justify-center items-center relative '>
                                             <div className='w-[34px] h-[34px] bg-primary-blue flex justify-center items-center rounded-full absolute left-4'>
@@ -122,7 +122,7 @@ const Modal = () => {
                                         </div>
                                     </div>
                                     <hr className='text-primary-BattleshipGrey sm:mt-2 3xl:mt-[37px]' />
-                                </div>
+                                </Link>
                             );
                         })}
 

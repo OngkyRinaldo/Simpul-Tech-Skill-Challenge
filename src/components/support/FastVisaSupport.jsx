@@ -3,13 +3,11 @@ import Ellipse8Icon from '../../assets/icons/buttons/Ellipse8.svg';
 import inboxIcon from '../../assets/icons/buttons/inboxIcon.svg';
 import Task from '../button/menu/Task';
 import SupportModal from './SupportModal';
-import SearchHomePage from '../search/SearchHomePage';
+import InboxLayout from '../../layouts/InboxLayout';
 
 const FastVisaSupport = () => {
     return (
-        <section className='container ml-auto h-full w-4/5 border-l border-[#F2F2F2]'>
-            <SearchHomePage />
-
+        <InboxLayout>
             <SupportModal />
             <div className='flex justify-center items-center gap-x-8 absolute bottom-[33px] right-10 '>
                 <Task />
@@ -32,7 +30,7 @@ const FastVisaSupport = () => {
                     </Link>
                 </div>
             </div>
-        </section>
+        </InboxLayout>
     );
 };
 
