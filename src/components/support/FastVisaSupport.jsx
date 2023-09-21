@@ -3,11 +3,11 @@ import Ellipse8Icon from '../../assets/icons/buttons/Ellipse8.svg';
 import inboxIcon from '../../assets/icons/buttons/inboxIcon.svg';
 import Task from '../button/menu/Task';
 import SupportModal from './SupportModal';
-import InboxLayout from '../../layouts/InboxLayout';
+import MainLayout from '../../layouts/MainLayout';
 
 const FastVisaSupport = () => {
     return (
-        <InboxLayout>
+        <MainLayout>
             <SupportModal />
             <div className='flex justify-center items-center gap-x-8 absolute bottom-[33px] right-10 '>
                 <Task />
@@ -30,7 +30,7 @@ const FastVisaSupport = () => {
                     </Link>
                 </div>
             </div>
-        </InboxLayout>
+        </MainLayout>
     );
 };
 

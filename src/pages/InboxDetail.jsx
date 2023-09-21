@@ -1,11 +1,11 @@
 import DetailsComponent from '../components/DetailsComponent';
-import InboxLayout from '../layouts/InboxLayout';
+import MainLayout from '../layouts/MainLayout';
 
 const InboxDetails = () => {
     return (
-        <InboxLayout>
+        <MainLayout>
             <DetailsComponent />
-        </InboxLayout>
+        </MainLayout>
     );
 };
 

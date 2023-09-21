@@ -1,14 +1,13 @@
 import inboxIcon from '../assets/icons/buttons/inboxIcon.svg';
-
 import Ellipse8Icon from '../assets/icons/buttons/Ellipse8.svg';
 import { Link } from 'react-router-dom';
 import Modal from '../components/modal/InboxModal';
-import InboxLayout from '../layouts/InboxLayout';
 import Task from './button/menu/Task';
+import MainLayout from '../layouts/MainLayout';
 
 const MessageList = () => {
     return (
-        <InboxLayout>
+        <MainLayout>
             <section className='flex justify-center items-center gap-x-8 absolute bottom-[33px] right-10 '>
                 <Task />
                 <div className='flex flex-col '>
@@ -35,7 +34,7 @@ const MessageList = () => {
                     </Link>
                 </div>
             </section>
-        </InboxLayout>
+        </MainLayout>
     );
 };
 
