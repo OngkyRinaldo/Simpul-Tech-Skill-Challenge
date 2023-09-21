@@ -5,7 +5,7 @@ import closeModalIcon from '../../assets/icons/buttons/detailButton/closeModal.s
 const HeaderDetailComponent = () => {
     return (
         <div className='flex justify-between items-center  p-5'>
-            <div className='flex gap-x-[15px]'>
+            <div className='flex justify-between items-start gap-x-[15px]'>
                 <Link to='/messageList'>
                     <img
                         src={arrowReturnIcon}
@@ -14,12 +14,12 @@ const HeaderDetailComponent = () => {
                     />
                 </Link>
 
-                <div className=''>
+                <div className='text-sm'>
                     <h2 className='font-bold text-primary-blue'>
                         I-589 - AMARKHIL, Obaidullah [Affirmative Filing with
                         ZHN]
                     </h2>
-                    <p className='text-main text-sm mt-2'>3 Participant</p>
+                    <p className='text-main  mt-2'>3 Participant</p>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@ const HeaderDetailComponent = () => {
                 <img
                     src={closeModalIcon}
                     alt='closeModal.svg'
-                    className='cursor-pointer'
+                    className='cursor-pointer w-full h-full'
                 />
             </Link>
         </div>

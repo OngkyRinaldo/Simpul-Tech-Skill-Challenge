@@ -10,11 +10,14 @@ const Inbox = () => {
 
             <div className='flex flex-col '>
                 <p className='text-[#f2f2f2] mb-4 text-center'>Inbox</p>
-                <img
-                    src={Ellipse8Icon}
-                    alt='Ellipse8.svg'
-                    className='absolute bottom-0  -right-1 xl:right-1'
-                />
+                <Link to='/'>
+                    <img
+                        src={Ellipse8Icon}
+                        alt='Ellipse8.svg'
+                        className='absolute -bottom-1 lg:bottom-0  right-1 xl:right-5  test active
+                            w-16  h-14 xl:h-16 '
+                    />
+                </Link>
 
                 <Link
                     to='/inbox'

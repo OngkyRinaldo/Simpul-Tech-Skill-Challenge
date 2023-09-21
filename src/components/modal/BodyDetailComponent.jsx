@@ -3,7 +3,7 @@ import chatOptions from '../../assets/icons/buttons/chats/3dots.svg';
 import { Link } from 'react-router-dom';
 
 const BodyDetailComponent = () => {
-    const [showButtons, setShowButtons] = useState(false);
+    const [showButtons, setShowButtons] = useState(true);
     const [newMessage, setNewMessage] = useState(false);
     const handleButtonClick = () => {
         setShowButtons(!showButtons);
@@ -64,7 +64,7 @@ const BodyDetailComponent = () => {
 
                 <div className='flex items-start justify-end gap-4 relative '>
                     {showButtons && (
-                        <div className='absolute md:right-64 md:top-4 3xl:right-96 3xl:top-6 z-10 w-[126px] shadow bg-white border text-center '>
+                        <div className='absolute right-20 top-5 md:right-64 md:top-4 3xl:right-96 3xl:top-6 z-10 w-[126px] shadow bg-white border text-center '>
                             <Link className='p-2 text-primary-blue'>Edit</Link>
                             <hr />
                             <Link className='p-2 text-[#EB5757]'>Delete</Link>

@@ -18,7 +18,8 @@ const Inbox = () => {
                         <img
                             src={Ellipse8Icon}
                             alt='Ellipse8.svg'
-                            className='absolute bottom-0  -right-1 xl:right-1 test active'
+                            className='absolute -bottom-1 lg:bottom-0  right-1 xl:right-5  test active
+                            w-16  h-14 xl:h-16 '
                         />
                     </Link>
                     <Modal />

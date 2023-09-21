@@ -29,8 +29,8 @@ const Modal = () => {
     );
 
     return (
-        <div className='absolute  bottom-16 sm:bottom-24 3xl:bottom-20 -right-10 sm:right-0'>
-            <div className='w-fit sm:w-96 h-fit md:min-w-[550px]  3xl:w-modalWidth 3xl:h-modalHeight bg-white  p-5 rounded-lg'>
+        <div className='absolute  bottom-16 sm:bottom-16 xl:bottom-20 -right-10 sm:right-0'>
+            <div className='w-fit sm:w-96 h-fit  md:min-w-[550px]  3xl:w-modalWidth 3xl:h-modalHeight bg-white  p-5 rounded-lg'>
                 <SearchModal
                     searchUser={searchUser}
                     setSearchUser={setSearchUser}
