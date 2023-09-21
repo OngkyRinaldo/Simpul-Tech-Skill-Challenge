@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Task from './Task';
 import Inbox from './Inbox';
-import { Link } from 'react-router-dom';
 import menuIcon from '../../../assets/icons/buttons/menuIcon.svg';
 
 const Menu = () => {
@@ -11,13 +10,12 @@ const Menu = () => {
     };
 
     return (
-        <section className='flex justify-center items-center gap-x-8 absolute bottom-[33px] right-10 '>
+        <div className='flex justify-center items-center gap-x-8 absolute bottom-[33px] right-10 '>
             {showButtons && (
                 <div className='flex justify-center items-center gap-x-8'>
                     <Task />
-                    <Link to='/inbox'>
-                        <Inbox />
-                    </Link>
+
+                    <Inbox />
                 </div>
             )}
 
@@ -29,7 +27,7 @@ const Menu = () => {
             >
                 <img src={menuIcon} alt='menuIcon.svg' />
             </button>
-        </section>
+        </div>
     );
 };
 

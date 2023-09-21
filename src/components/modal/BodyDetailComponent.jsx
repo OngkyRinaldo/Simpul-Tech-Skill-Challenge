@@ -3,7 +3,7 @@ import chatOptions from '../../assets/icons/buttons/chats/3dots.svg';
 import { Link } from 'react-router-dom';
 
 const BodyDetailComponent = () => {
-    const [showButtons, setShowButtons] = useState(true);
+    const [showButtons, setShowButtons] = useState(false);
     const [newMessage, setNewMessage] = useState(false);
     const handleButtonClick = () => {
         setShowButtons(!showButtons);
@@ -61,15 +61,16 @@ const BodyDetailComponent = () => {
 
             <div className='text-start ml-auto'>
                 <h2 className=' text-right text-chats-lavenderIndigo'>You</h2>
-                <div className='flex items-start justify-end gap-4'>
+
+                <div className='flex items-start justify-end gap-4 relative '>
                     {showButtons && (
-                        <div className=' w-[126px] shadow border text-center '>
+                        <div className='absolute md:right-64 md:top-4 3xl:right-96 3xl:top-6 z-10 w-[126px] shadow bg-white border text-center '>
                             <Link className='p-2 text-primary-blue'>Edit</Link>
                             <hr />
                             <Link className='p-2 text-[#EB5757]'>Delete</Link>
                         </div>
                     )}
-                    <div className='cursor-pointer'>
+                    <div className='cursor-pointer '>
                         <img
                             src={chatOptions}
                             alt='3dots.svg'

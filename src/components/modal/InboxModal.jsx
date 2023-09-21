@@ -5,7 +5,7 @@ import {
     selectAllUserData,
     selectStatusUserData,
 } from '../../feature/inboxSlice';
-import SearchModal from '../serach/SearchModal';
+import SearchModal from '../search/SearchModal';
 import { Link } from 'react-router-dom';
 import grayPersonIcon from '../../assets/icons/modal/grayPerson.svg';
 import redDotIcon from '../../assets/icons/modal/redDot.svg';
@@ -29,13 +29,13 @@ const Modal = () => {
 
     return (
         <div className='absolute  bottom-16 sm:bottom-40 3xl:bottom-20 right-0'>
-            <div className='w-80 h-fit lg:w-[600px]  3xl:w-modalWidth 3xl:h-modalHeight bg-white  p-5'>
+            <div className='w-64 h-fit md:min-w-[600px]  3xl:w-modalWidth 3xl:h-modalHeight bg-white  p-5 rounded-lg'>
                 <SearchModal
                     searchUser={searchUser}
                     setSearchUser={setSearchUser}
                 />
                 {status === 'loading' ? (
-                    <div className='w-full flex justify-center items-center mt-28 3xl:mt-64'>
+                    <div className='w-full flex justify-center items-center mt-2 3xl:mt-64'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             width='114'

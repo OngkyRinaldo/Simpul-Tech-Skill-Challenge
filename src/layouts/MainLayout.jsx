@@ -1,13 +1,13 @@
-import DetailsComponent from '../components/DetailsComponent';
 import SearchHomePage from '../components/search/SearchHomePage';
 
-const InboxDetails = () => {
+const MainLayout = ({ children }) => {
     return (
         <section className='container ml-auto h-full w-4/5 border-l border-[#F2F2F2]'>
             <SearchHomePage />
-            <DetailsComponent />
+
+            {children}
         </section>
     );
 };
 
-export default InboxDetails;
+export default MainLayout;

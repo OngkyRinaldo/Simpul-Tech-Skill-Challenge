@@ -10,7 +10,7 @@ const SupportModal = () => {
             <div className='w-80 3xl:min-h-[726px] lg:w-[600px]  3xl:w-modalWidth  bg-white rounded-md '>
                 <div className='flex justify-between items-center  p-5'>
                     <div className='flex gap-x-[15px]'>
-                        <Link to='/inbox/inboxModal'>
+                        <Link to='/messageList'>
                             <img
                                 src={arrowReturnIcon}
                                 alt='arrowReturn.svg'

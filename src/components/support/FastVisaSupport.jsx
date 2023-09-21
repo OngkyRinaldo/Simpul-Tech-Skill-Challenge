@@ -3,7 +3,7 @@ import Ellipse8Icon from '../../assets/icons/buttons/Ellipse8.svg';
 import inboxIcon from '../../assets/icons/buttons/inboxIcon.svg';
 import Task from '../button/menu/Task';
 import SupportModal from './SupportModal';
-import SearchHomePage from '../serach/SearchHomePage';
+import SearchHomePage from '../search/SearchHomePage';
 
 const FastVisaSupport = () => {
     return (

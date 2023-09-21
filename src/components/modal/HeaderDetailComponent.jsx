@@ -6,7 +6,7 @@ const HeaderDetailComponent = () => {
     return (
         <div className='flex justify-between items-center  p-5'>
             <div className='flex gap-x-[15px]'>
-                <Link to='/inbox/inboxModal'>
+                <Link to='/messageList'>
                     <img
                         src={arrowReturnIcon}
                         alt='arrowReturn.svg'
