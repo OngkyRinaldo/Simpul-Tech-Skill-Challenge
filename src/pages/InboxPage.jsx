@@ -1,16 +1,16 @@
-import DetailsInboxButton from '../components/button/menu/DetailsInboxButton';
 import Task from '../components/button/menu/Task';
 import MainLayout from '../layouts/MainLayout';
+import Inbox from '../components/button/menu/Inbox';
 
-const InboxDetails = () => {
+const InboxPage = () => {
     return (
         <MainLayout>
             <div className='flex justify-center items-center gap-x-8 absolute bottom-[33px] right-10 '>
                 <Task />
-                <DetailsInboxButton />
+                <Inbox />
             </div>
         </MainLayout>
     );
 };
 
-export default InboxDetails;
+export default InboxPage;
