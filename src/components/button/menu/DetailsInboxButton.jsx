@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import DetailModal from '../../modal/DetailModal';
+
 import Ellipse8Icon from '../../../assets/icons/buttons/Ellipse8.svg';
 import inboxIcon from '../../../assets/icons/buttons/inboxIcon.svg';
+import DetailModal from '../../modal/inbox/DetailModal';
 
 const Inbox = () => {
     return (

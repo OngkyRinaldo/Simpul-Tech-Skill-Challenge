@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import arrowReturnIcon from '../../assets/icons/buttons/detailButton/arrowReturn.svg';
-import closeModalIcon from '../../assets/icons/buttons/detailButton/closeModal.svg';
+import arrowReturnIcon from '../../../assets/icons/buttons/detailButton/arrowReturn.svg';
+import closeModalIcon from '../../../assets/icons/buttons/detailButton/closeModal.svg';
 
 const HeaderDetailComponent = () => {
     return (

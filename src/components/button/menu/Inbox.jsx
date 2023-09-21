@@ -3,7 +3,7 @@ import { useState } from 'react';
 import inboxIcon from '../../../assets/icons/buttons/inboxIcon.svg';
 import Ellipse8Icon from '../../../assets/icons/buttons/Ellipse8.svg';
 import { Link } from 'react-router-dom';
-import Modal from '../../modal/InboxModal';
+import Modal from '../../modal/inbox/InboxModal';
 
 const Inbox = () => {
     const [showButtons, setShowButtons] = useState(false);

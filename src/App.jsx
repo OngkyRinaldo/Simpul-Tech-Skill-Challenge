@@ -5,7 +5,7 @@ import NotFound from './pages/404';
 import InboxDetails from './pages/InboxDetail';
 import FastVisaSupport from './components/support/FastVisaSupport';
 import MessageList from './components/MessageList';
-import Task from './pages/Task';
+import TaskPage from './pages/TaskPage';
 
 function App() {
     return (
@@ -16,7 +16,7 @@ function App() {
                 <Route path='messageList' element={<MessageList />} />
                 <Route path='detailMessage' element={<InboxDetails />} />
                 <Route path='fastVisaSupport' element={<FastVisaSupport />} />
-                <Route path='task' element={<Task />} />
+                <Route path='task' element={<TaskPage />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </main>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import chatOptions from '../../assets/icons/buttons/chats/3dots.svg';
+import chatOptions from '../../../assets/icons/buttons/chats/3dots.svg';
 import { Link } from 'react-router-dom';
 
 const BodyDetailComponent = () => {

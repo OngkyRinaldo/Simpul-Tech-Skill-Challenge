@@ -1,7 +1,7 @@
 import inboxIcon from '../assets/icons/buttons/inboxIcon.svg';
 import Ellipse8Icon from '../assets/icons/buttons/Ellipse8.svg';
 import { Link } from 'react-router-dom';
-import Modal from '../components/modal/InboxModal';
+import Modal from './modal/inbox/InboxModal';
 import Task from './button/menu/Task';
 import MainLayout from '../layouts/MainLayout';
 

@@ -4,14 +4,14 @@ import {
     fetchUsers,
     selectAllUserData,
     selectStatusUserData,
-} from '../../feature/inboxSlice';
-import SearchModal from '../search/SearchModal';
+} from '../../../feature/inboxSlice';
+import SearchModal from '../../search/SearchModal';
 import { Link } from 'react-router-dom';
-import grayPersonIcon from '../../assets/icons/modal/grayPerson.svg';
-import redDotIcon from '../../assets/icons/modal/redDot.svg';
-import bluePersonIcon from '../../assets/icons/modal/bluePerson.svg';
-import fIcon from '../../assets/icons/modal/F.svg';
-import mainLoading from '../../assets/icons/main-loading.svg';
+import grayPersonIcon from '../../../assets/icons/modal/grayPerson.svg';
+import redDotIcon from '../../../assets/icons/modal/redDot.svg';
+import bluePersonIcon from '../../../assets/icons/modal/bluePerson.svg';
+import fIcon from '../../../assets/icons/modal/F.svg';
+import mainLoading from '../../../assets/icons/main-loading.svg';
 
 const Modal = () => {
     const dispatch = useDispatch();
