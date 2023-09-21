@@ -15,3 +15,7 @@
 .test.active {
     display: inline;
 }
+
+.task-done {
+    text-decoration-line: line-through;
+}
