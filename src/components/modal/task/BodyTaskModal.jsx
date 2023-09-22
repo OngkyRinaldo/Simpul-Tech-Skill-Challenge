@@ -64,6 +64,7 @@ const BodyTaskModal = () => {
                                     <img src={chatOptions} alt='3dots.svg' />
                                 </div>
                             </div>
+                            <hr className='border-t-2 border-gray-300 my-4' />
 
                             <div className='p-4'>
                                 {isOpen[index] && (
@@ -90,7 +91,7 @@ const BodyTaskModal = () => {
                                                 </p>
                                             </div>
                                         </div>
-                                        <hr />
+                                        <hr className='border-t-2 border-gray-300 my-4' />
                                     </>
                                 )}
                             </div>
@@ -121,6 +122,7 @@ const BodyTaskModal = () => {
                                     <img src={chatOptions} alt='3dots.svg' />
                                 </div>
                             </div>
+                            <hr className='border-t-2 border-gray-300 my-4' />
 
                             <div className='p-4'>
                                 {isOpen[index] && (
@@ -147,7 +149,7 @@ const BodyTaskModal = () => {
                                                 </p>
                                             </div>
                                         </div>
-                                        <hr />
+                                        <hr className='border-t-2 border-gray-300 my-4' />
                                     </>
                                 )}
                             </div>
