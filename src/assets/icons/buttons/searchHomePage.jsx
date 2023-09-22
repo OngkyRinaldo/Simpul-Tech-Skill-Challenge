@@ -1,4 +1,6 @@
-  <svg
+const SearchHomePageButton = () => {
+    return (
+        <svg
             width='16'
             height='16'
             viewBox='0 0 16 16'
@@ -13,3 +15,7 @@
                 fill='#F2F2F2'
             />
         </svg>
+    );
+};
+
+export default SearchHomePageButton;
