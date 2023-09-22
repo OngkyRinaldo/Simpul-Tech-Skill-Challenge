@@ -1,4 +1,4 @@
-import searchHomePageIcon from '../../assets/icons/Buttons/searchHomePage.svg';
+import SearchHomePageButton from '../../assets/icons/buttons/searchHomePage';
 
 const SearchHomePage = () => {
     return (
@@ -8,7 +8,7 @@ const SearchHomePage = () => {
                 className='border-none focus:outline-none  bg-primary-live w-full  h-[58px]'
             />
             <div className='absolute inset-y-0 flex items-center pointer-events-none pl-paddingLeftHomeSearch pt-paddingTopHomeSearch pb-paddingBottomHomeSearch'>
-                <img src={searchHomePageIcon} alt='searchHomePage.svg' />
+                <SearchHomePageButton />
             </div>
         </section>
     );
