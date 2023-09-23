@@ -4,8 +4,10 @@ import closeModalIcon from '../../../assets/icons/buttons/detailButton/closeModa
 
 const HeaderDetailComponent = () => {
     return (
-        <div className='flex justify-between items-center  p-5'>
+        <div className='flex justify-between items-center p-5'>
+            {/* Bagian kiri header */}
             <div className='flex justify-between items-start gap-x-[15px]'>
+                {/* Tombol kembali */}
                 <Link to='/messageList'>
                     <img
                         src={arrowReturnIcon}
@@ -14,15 +16,17 @@ const HeaderDetailComponent = () => {
                     />
                 </Link>
 
+                {/* Judul dan informasi */}
                 <div className='text-sm'>
                     <h2 className='font-bold text-primary-blue'>
                         I-589 - AMARKHIL, Obaidullah [Affirmative Filing with
                         ZHN]
                     </h2>
-                    <p className='text-main  mt-2'>3 Participant</p>
+                    <p className='text-main mt-2'>3 Participant</p>
                 </div>
             </div>
 
+            {/* Tombol untuk menutup modal */}
             <Link to='/inbox'>
                 <img
                     src={closeModalIcon}

@@ -6,19 +6,20 @@ import TaskModal from '../../modal/task/TaskModal';
 
 const Task = () => {
     const [showButtons, setShowButtons] = useState(false);
+
     const handleButtonClick = () => {
         setShowButtons(!showButtons);
     };
+
     return (
-        <div to='/task' className='flex flex-col '>
+        <div to='/task' className='flex flex-col'>
             {showButtons && (
                 <>
                     <Link to='/'>
                         <img
                             src={Ellipse8Icon}
                             alt='Ellipse8.svg'
-                            className='absolute -bottom-1 lg:bottom-0  right-1 xl:right-5  test active
-                            w-16  h-14 xl:h-16 '
+                            className='absolute -bottom-1 lg:bottom-0 right-1 xl:right-5 w-16 h-14 xl:h-16'
                         />
                     </Link>
                     <TaskModal />
