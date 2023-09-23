@@ -15,8 +15,8 @@ const BodyTaskModal = () => {
     const dispatch = useDispatch();
     const taskData = useSelector(selectAllTaskData);
     const status = useSelector(selectStatusTaskData);
+    const [checkList, setCheckList] = useState('done');
 
-    // Initialize isOpen as an array with the same length as taskData
     const [isOpen, setIsOpen] = useState(
         new Array(taskData.length).fill(false)
     );
@@ -29,6 +29,10 @@ const BodyTaskModal = () => {
         const newIsOpen = [...isOpen];
         newIsOpen[index] = !newIsOpen[index];
         setIsOpen(newIsOpen);
+    };
+
+    const handleCheckList = () => {
+        setCheckList(!checkList);
     };
 
     return (
